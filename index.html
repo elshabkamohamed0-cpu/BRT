@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#092f43">
+<title>BRT | المفقودات الذكية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--navy:#082f43;--navy2:#104b60;--teal:#10a6a0;--mint:#e9f8f6;--ink:#173344;--muted:#718592;--line:#e4edf0;--bg:#f3f7f9;--white:#fff;--gold:#f4b942;--red:#d95d5d;--shadow:0 14px 40px rgba(8,47,67,.09)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',Tahoma,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.app{min-height:100vh}.topbar{background:linear-gradient(115deg,#061f35,#0b3c57);color:#fff;padding:18px max(22px,calc((100vw - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative;overflow:hidden}.topbar:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff18;border-radius:50%;left:7%;top:-180px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.brand{display:flex;align-items:center;gap:13px;z-index:1}.brandmark{width:58px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;color:var(--navy);font-weight:900;font-size:21px;letter-spacing:-1.5px;box-shadow:0 8px 22px #001a2b55;border-bottom:4px solid #d92736}.brandname{font-size:22px;font-weight:900;line-height:1.2}.brandname small{display:block;font-size:11px;font-weight:500;color:#c4e4e9;letter-spacing:.4px;margin-top:4px}.top-actions{display:flex;gap:8px;z-index:1;flex-wrap:wrap}.navbtn{background:#ffffff14;color:#eaf7f8;border:1px solid #ffffff2b;padding:9px 15px;border-radius:12px;font-size:13px;font-weight:700}.navbtn.active,.navbtn:hover{background:#fff;color:var(--navy)}.hero{max-width:1180px;margin:28px auto 22px;padding:0 22px}.hero-card{background:linear-gradient(90deg,rgba(5,27,47,.20) 0%,rgba(5,31,52,.83) 48%,rgba(5,31,52,.97) 100%),url('brt-bus-hero.jpg') left center/cover no-repeat;color:#fff;border-radius:25px;padding:34px 36px;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:245px;box-shadow:0 18px 44px rgba(8,47,67,.19);position:relative;overflow:hidden;border:1px solid #ffffff30}.hero-card:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff20;border-radius:50%;left:5%;top:-175px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.eyebrow{color:#ff7777;font-size:12px;font-weight:900;letter-spacing:1.3px}.hero h1{font-size:clamp(24px,4vw,36px);margin:7px 0 8px;font-weight:900}.hero p{margin:0;color:#d0e6eb;font-size:14px;max-width:570px;line-height:1.9}.hero-icon{z-index:1;width:104px;height:104px;flex:none;border-radius:28px;background:linear-gradient(145deg,#ffffff25,#ffffff0a);border:1px solid #ffffff45;display:grid;place-items:center;font-size:48px;backdrop-filter:blur(8px);box-shadow:0 12px 30px #001a2b44}.wrap{max-width:1180px;margin:auto;padding:0 22px 55px}.panel{display:none}.panel.active{display:block}.section-title{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:26px 0 14px}.section-title h2{margin:0;font-size:20px;font-weight:900}.section-title p{margin:3px 0 0;color:var(--muted);font-size:12px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 5px 22px #0b34450a}.form-layout{display:grid;grid-template-columns:1.45fr .8fr;gap:18px;align-items:start}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;color:#385466}.field input,.field select,.field textarea{width:100%;border:1px solid #dce7eb;background:#fbfdfe;border-radius:12px;padding:12px 13px;outline:none;color:var(--ink);transition:.2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #10a6a018}.field textarea{resize:vertical;min-height:88px}.hint{font-size:10px;color:var(--muted)}.radio-row{display:flex;gap:9px}.radio{flex:1;position:relative}.radio input{position:absolute;opacity:0}.radio span{display:block;text-align:center;border:1px solid var(--line);padding:11px;border-radius:12px;font-weight:800;font-size:13px;color:#526b79}.radio input:checked+span{background:var(--mint);border-color:var(--teal);color:#087a77}.primary{background:linear-gradient(110deg,#d92736,#a91025);color:#fff;padding:13px 20px;border-radius:13px;font-weight:900;box-shadow:0 8px 18px #b71f332b}.primary:hover{filter:brightness(.96);transform:translateY(-1px)}.secondary{background:#edf4f6;color:#315366;padding:11px 15px;border-radius:12px;font-weight:800}.sidebox{background:linear-gradient(160deg,#eff9f8,#f8fbfc);border:1px solid #dcefed;border-radius:18px;padding:21px}.sidebox h3{margin:0 0 8px;font-size:16px}.sidebox p{font-size:12px;color:#617986;line-height:1.9;margin:0}.steps{display:grid;gap:15px;margin-top:20px}.step{display:flex;gap:11px;align-items:center}.stepno{width:30px;height:30px;border-radius:10px;background:#d7f1ed;color:#087d79;display:grid;place-items:center;font-weight:900;font-size:12px;flex:none}.step strong{display:block;font-size:12px}.step small{color:var(--muted);font-size:10px}.privacy{margin-top:17px;padding:12px;border-radius:12px;background:#fff;border:1px solid #e2eeee;color:#58717d;font-size:10px;line-height:1.8}.success{display:none;text-align:center;padding:30px}.success.show{display:block}.success-icon{width:66px;height:66px;border-radius:22px;background:#e3f7ee;color:#15965d;display:grid;place-items:center;font-size:30px;margin:0 auto 14px}.ticket{background:#f7fbfc;border:1px dashed #a9c5cc;border-radius:14px;padding:12px;margin:15px auto;max-width:320px;font-weight:900;color:var(--navy)}.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:17px 0}.stat{background:#fff;border:1px solid var(--line);padding:17px;border-radius:17px}.stat span{font-size:11px;color:var(--muted);font-weight:700}.stat strong{display:block;font-size:27px;margin-top:3px;color:var(--navy)}.stat i{font-style:normal;font-size:20px;float:left}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.toolbar input,.toolbar select{border:1px solid var(--line);background:#fff;padding:10px 12px;border-radius:11px;min-width:155px;outline:none}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th{text-align:right;color:#6c818d;font-size:11px;background:#f7fafb;padding:13px}td{padding:13px;border-top:1px solid #edf2f4;font-size:12px}td strong{color:var(--navy)}.pill{display:inline-block;padding:5px 9px;border-radius:20px;font-size:10px;font-weight:800;background:#edf2f5;color:#607582}.pill.new{background:#fff4d9;color:#9b6a00}.pill.search{background:#e5f2ff;color:#2866a3}.pill.found{background:#e1f7ed;color:#137b50}.pill.done{background:#e9edf0;color:#657781}.status-select{padding:7px;border:1px solid var(--line);border-radius:9px;font-size:11px;background:#fff}.empty{text-align:center;padding:40px;color:var(--muted);font-size:13px}.qr-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}.qrbox{display:flex;align-items:center;justify-content:center;min-height:235px;background:#f7fafb;border:1px dashed #cbdde2;border-radius:16px;margin-top:13px;padding:18px}.qr-note{font-size:11px;color:var(--muted);line-height:1.9}.footer{background:#082f43;color:#c1d7dd;text-align:center;padding:22px;font-size:11px}.footer b{color:#fff}.toast{position:fixed;bottom:22px;left:22px;background:#153f50;color:#fff;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:9;font-size:12px}.toast.show{display:block;animation:fade 3s forwards}@keyframes fade{0%,75%{opacity:1}100%{opacity:0}}@media(max-width:760px){.hero-card{background-position:32% center;min-height:230px;padding:22px}.hero-icon{width:66px;height:66px;font-size:30px}.topbar{padding:14px 17px;align-items:flex-start;flex-direction:column}.top-actions{width:100%}.navbtn{flex:1}.hero{margin-top:18px}.hero-card{padding:22px}.hero-icon{width:70px;height:70px;font-size:32px;border-radius:20px}.form-layout,.qr-layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.stats{grid-template-columns:1fr 1fr}.card{padding:17px}.section-title{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+ <div class="brand"><div class="brandmark">BRT</div><div class="brandname">BRT <small>SMART LOST & FOUND · المفقودات الذكية</small></div></div>
+ <nav class="top-actions">
+  <button class="navbtn active" data-tab="citizen">إبلاغ عن مفقود</button>
+  <button class="navbtn" data-tab="admin">لوحة الإدارة</button>
+  <button class="navbtn" data-tab="qr">QR المحطة</button>
+ </nav>
+</header>
+<section class="hero">
+ <div class="hero-card">
+  <div><div class="eyebrow">BRT · CAIRO BUS RAPID TRANSIT</div><h1>مفقوداتك تهمّنا</h1><p>خدمة رقمية سهلة وآمنة لمساعدة ركاب الأتوبيس الترددي في الإبلاغ عن المفقودات ومتابعة البلاغات من مكان واحد.</p></div>
+  <div class="hero-icon">⌕</div>
+ </div>
+</section>
+<main class="wrap">
+<section class="panel active" id="citizen">
+ <div class="section-title"><div><h2>تسجيل بلاغ جديد</h2><p>املأ البيانات التالية وسيتولى فريق المحطة متابعة البلاغ.</p></div></div>
+ <div class="form-layout">
+  <div class="card">
+   <form id="reportForm">
+    <div class="form-grid">
+     <div class="field full"><label>نوع البلاغ</label><div class="radio-row">
+      <label class="radio"><input type="radio" name="kind" value="مفقود مني" checked><span>🔎 ضاعت مني حاجة</span></label>
+      <label class="radio"><input type="radio" name="kind" value="عثرْت عليها"><span>📦 لقيت حاجة</span></label>
+     </div></div>
+     <div class="field"><label for="station">المحطة</label><select id="station" required><option value="">اختر المحطة</option></select></div>
+     <div class="field"><label for="item">نوع الحاجة</label><select id="item" required><option value="">اختر نوع الحاجة</option><option>شنطة</option><option>محفظة</option><option>موبايل</option><option>مفاتيح</option><option>بطاقة شخصية</option><option>سماعة</option><option>ملابس</option><option>أوراق ومستندات</option><option>أخرى</option></select></div>
+     <div class="field"><label for="color">اللون</label><select id="color" required><option value="">اختر اللون</option><option>أسود</option><option>أبيض</option><option>أحمر</option><option>أزرق</option><option>بني</option><option>رمادي</option><option>أخضر</option><option>أصفر</option><option>لون آخر</option><option>غير معروف</option></select></div>
+     <div class="field"><label for="date">تاريخ الواقعة</label><input id="date" type="date" required></div>
+     <div class="field"><label for="phone">رقم الهاتف للتواصل</label><input id="phone" type="tel" inputmode="tel" placeholder="01xxxxxxxxx" pattern="01[0-9]{9}" required><span class="hint">لن يظهر رقمك للركاب الآخرين.</span></div>
+     <div class="field"><label for="time">وقت تقريبي (اختياري)</label><input id="time" type="time"></div>
+     <div class="field full"><label for="details">وصف أو تفاصيل تساعد في التعرف على الحاجة</label><textarea id="details" maxlength="500" placeholder="مثال: شنطة سوداء صغيرة وبها سلسلة فضية..."></textarea></div>
+     <div class="field full"><button class="primary" type="submit">إرسال البلاغ ←</button></div>
+    </div>
+   </form>
+   <div class="success" id="success"><div class="success-icon">✓</div><h2>تم تسجيل البلاغ بنجاح</h2><p class="hint">احتفظ برقم البلاغ لمتابعته مع إدارة المحطة.</p><div class="ticket" id="ticket"></div><button class="secondary" id="newReport">تسجيل بلاغ جديد</button></div>
+  </div>
+  <aside class="sidebox">
+   <h3>إزاي الخدمة بتشتغل؟</h3><p>خطوات بسيطة تساعدنا نوصل لحاجتك المفقودة بأسرع وقت.</p>
+   <div class="steps">
+    <div class="step"><div class="stepno">01</div><div><strong>امسح QR Code</strong><small>من الملصق الموجود بالمحطة.</small></div></div>
+    <div class="step"><div class="stepno">02</div><div><strong>اكتب بيانات الحاجة</strong><small>المحطة، النوع، اللون، والتفاصيل.</small></div></div>
+    <div class="step"><div class="stepno">03</div><div><strong>احتفظ برقم البلاغ</strong><small>لمتابعة حالته مع فريق BRT.</small></div></div>
+   </div>
+   <div class="privacy">🔒 <b>خصوصيتك مهمة</b><br>بيانات الاتصال مخصصة لموظفي الإدارة المخولين بمتابعة البلاغات، ولا تُعرض في صفحة عامة.</div>
+  </aside>
+ </div>
+</section>
+<section class="panel" id="admin">
+ <div class="section-title admin-head"><div><h2>لوحة متابعة المفقودات</h2><p>إدارة البلاغات ومتابعة حالتها — بيانات هذا النموذج محفوظة على نفس الجهاز.</p></div><button class="secondary" id="export">⬇ تصدير CSV</button></div>
+ <div class="stats">
+  <div class="stat"><i>📋</i><span>إجمالي البلاغات</span><strong id="total">0</strong></div>
+  <div class="stat"><i>🆕</i><span>بلاغات جديدة</span><strong id="newCount">0</strong></div>
+  <div class="stat"><i>🔍</i><span>جاري البحث</span><strong id="searchCount">0</strong></div>
+  <div class="stat"><i>✓</i><span>تم العثور / التسليم</span><strong id="closedCount">0</strong></div>
+ </div>
+ <div class="card">
+  <div class="toolbar"><input id="searchBox" placeholder="ابحث برقم البلاغ أو الهاتف..."><select id="filterStation"><option value="">كل المحطات</option></select><select id="filterStatus"><option value="">كل الحالات</option><option>جديد</option><option>جاري البحث</option><option>تم العثور</option><option>تم التسليم</option></select></div>
+  <div class="table-wrap"><table><thead><tr><th>رقم البلاغ</th><th>النوع</th><th>المحطة</th><th>الحاجة / اللون</th><th>الهاتف</th><th>التاريخ</th><th>الحالة</th></tr></thead><tbody id="reportsBody"></tbody></table><div class="empty" id="empty">لا توجد بلاغات حتى الآن.</div></div>
+ </div>
+</section>
+<section class="panel" id="qr">
+ <div class="section-title"><div><h2>إنشاء QR Code للمحطة</h2><p>أنشئ رمزًا يوجّه الراكب مباشرة إلى صفحة الإبلاغ عن المفقودات.</p></div></div>
+ <div class="qr-layout">
+  <div class="card">
+   <div class="field"><label for="qrStation">اختر المحطة</label><select id="qrStation"></select></div>
+   <div class="field" style="margin-top:14px"><label for="siteUrl">رابط الموقع بعد نشره</label><input id="siteUrl" placeholder="https://example.com/brt-lost-found"></div>
+   <p class="qr-note">مهم: ارفع ملفات الموقع على استضافة أولًا، ثم ضع الرابط العام هنا. لا تستخدم رابطًا محليًا من جهازك عند طباعة QR.</p>
+   <button class="primary" id="makeQR" style="margin-top:10px">إنشاء QR Code</button>
+  </div>
+  <div class="card"><h3 style="margin-top:0">معاينة الرمز</h3><div class="qrbox"><div id="qrcode"><span class="hint">سيظهر QR Code هنا بعد إدخال رابط الموقع.</span></div></div><p class="qr-note" id="qrCaption">يمكن طباعة الرمز وتعليقه في المحطة بعد اختبار الرابط على هاتف آخر.</p><button class="secondary" id="downloadQR" style="width:100%">حفظ صورة QR</button></div>
+ </div>
+</section>
+</main>
+<footer class="footer"><b>BRT SMART LOST & FOUND</b> · خدمة المفقودات الذكية لركاب الأتوبيس الترددي<br>نسخة تجريبية للعرض والتطوير — © BRT</footer>
+<div class="toast" id="toast"></div>
+</div>
+<script>
+const stations=["إسكندرية الزراعي","أحمد عبد الرحيم","شبرا / بنها","بهتيم","مسطرد","الخصوص","المرج","محمد نجيب","مؤسسة الزكاة","إبراهيم عرابي","السلام","عدلي منصور","طريق السويس","أكاديمية الشرطة","المشير طنطاوي","الجولف","المعادي","زهراء المعادي","المقطم","الأوتوستراد","الجزائر","الإمامين","الزهراء","البحر الأعظم","العمرانية","الطالبية","المريوطية","المنصورية","صن كابيتال"];
+const $=id=>document.getElementById(id);
+function fillSelect(id,first){const el=$(id);if(first)el.innerHTML=`<option value="">${first}</option>`;stations.forEach(s=>el.add(new Option(s,s)));}
+fillSelect("station","اختر المحطة");fillSelect("filterStation","كل المحطات");fillSelect("qrStation","اختر المحطة");
+$("date").value=new Date().toISOString().slice(0,10);
+const KEY="brt_lost_found_reports_v1";
+let reports=[];try{reports=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){reports=[]}
+function save(){localStorage.setItem(KEY,JSON.stringify(reports))}
+function toast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),3000)}
+function switchTab(tab){document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===tab));document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="admin")render();}
+document.querySelectorAll(".navbtn").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
+$("reportForm").addEventListener("submit",e=>{e.preventDefault();const phone=$("phone").value.trim();if(!/^01\d{9}$/.test(phone)){toast("من فضلك أدخل رقم هاتف مصري صحيح.");return}
+const report={id:"BRT-"+Date.now().toString().slice(-7),kind:document.querySelector('input[name="kind"]:checked').value,station:$("station").value,item:$("item").value,color:$("color").value,date:$("date").value,time:$("time").value,phone,details:$("details").value,status:"جديد",created:new Date().toISOString()};
+reports.unshift(report);save();$("ticket").textContent=report.id;$("reportForm").style.display="none";$("success").classList.add("show");});
+$("newReport").onclick=()=>{$("reportForm").reset();$("date").value=new Date().toISOString().slice(0,10);$("reportForm").style.display="block";$("success").classList.remove("show")};
+function statusClass(s){return s==="جديد"?"new":s==="جاري البحث"?"search":s==="تم العثور"?"found":"done"}
+function render(){const q=$("searchBox").value.trim().toLowerCase(),st=$("filterStation").value,fs=$("filterStatus").value;const filtered=reports.filter(r=>(!q||[r.id,r.phone,r.item,r.details].join(" ").toLowerCase().includes(q))&&(!st||r.station===st)&&(!fs||r.status===fs));
+$("total").textContent=reports.length;$("newCount").textContent=reports.filter(r=>r.status==="جديد").length;$("searchCount").textContent=reports.filter(r=>r.status==="جاري البحث").length;$("closedCount").textContent=reports.filter(r=>["تم العثور","تم التسليم"].includes(r.status)).length;
+$("reportsBody").innerHTML=filtered.map(r=>`<tr><td><strong>${esc(r.id)}</strong><br><span class="hint">${esc(r.kind)}</span></td><td>${esc(r.kind)}</td><td>${esc(r.station)}</td><td>${esc(r.item)} · ${esc(r.color)}</td><td dir="ltr">${esc(r.phone)}</td><td>${esc(r.date)}</td><td><select class="status-select" data-id="${esc(r.id)}"><option ${r.status==="جديد"?"selected":""}>جديد</option><option ${r.status==="جاري البحث"?"selected":""}>جاري البحث</option><option ${r.status==="تم العثور"?"selected":""}>تم العثور</option><option ${r.status==="تم التسليم"?"selected":""}>تم التسليم</option></select><br><span class="pill ${statusClass(r.status)}">${esc(r.status)}</span></td></tr>`).join("");
+$("empty").style.display=filtered.length?"none":"block";
+document.querySelectorAll(".status-select").forEach(s=>s.onchange=()=>{const r=reports.find(x=>x.id===s.dataset.id);if(r){r.status=s.value;save();render();toast("تم تحديث حالة البلاغ.");}});
+}
+["searchBox","filterStation","filterStatus"].forEach(id=>$(id).addEventListener("input",render));
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("export").onclick=()=>{if(!reports.length){toast("لا توجد بيانات للتصدير.");return}const rows=[["رقم البلاغ","نوع البلاغ","المحطة","الحاجة","اللون","الهاتف","التاريخ","الوقت","التفاصيل","الحالة"],...reports.map(r=>[r.id,r.kind,r.station,r.item,r.color,r.phone,r.date,r.time,r.details,r.status])];const csv="\uFEFF"+rows.map(row=>row.map(x=>'"'+String(x??"").replace(/"/g,'""')+'"').join(",")).join("\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));a.download="BRT-lost-found-reports.csv";a.click();URL.revokeObjectURL(a.href);};
+$("makeQR").onclick=()=>{const url=$("siteUrl").value.trim();const station=$("qrStation").value;if(!station){toast("اختر المحطة أولًا.");return}if(!/^https?:\/\//i.test(url)){toast("أدخل رابط الموقع العام الذي يبدأ بـ https://");return}if(typeof QRCode==="undefined"){toast("تعذر تحميل أداة QR. تأكد من الاتصال بالإنترنت.");return}const target=url+(url.includes("?")?"&":"?")+"station="+encodeURIComponent(station);$("qrcode").innerHTML="";new QRCode($("qrcode"),{text:target,width:190,height:190,colorDark:"#082f43",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});$("qrCaption").textContent="QR خاص بمحطة "+station+" — اختبره قبل الطباعة."};
+$("downloadQR").onclick=()=>{const node=$("qrcode").querySelector("canvas")||$("qrcode").querySelector("img");if(!node){toast("أنشئ QR Code أولًا.");return}const a=document.createElement("a");a.href=node.tagName==="CANVAS"?node.toDataURL("image/png"):node.src;a.download="BRT-Station-QR.png";a.click()};
+const params=new URLSearchParams(location.search);const preset=params.get("station");if(preset&&stations.includes(preset)){$("station").value=preset}
+render();
+</script>
+</body></html>
